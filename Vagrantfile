@@ -37,8 +37,8 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.synced_folder "logs/", "/var/log/easyengine", owner: "root", group: "root"
-  
-  config.vm.provision "shell", path: "easyengine.sh"
 
   config.vm.provision "shell", inline: "apt-get update && apt-get install -y curl"
+  
+  config.vm.provision "shell", path: "easyengine.sh"
 end
