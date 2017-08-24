@@ -21,3 +21,7 @@ myecho
 sudo ee site create a.dev --html || exit 1
 
 myecho
+
+sudo mkdir /var/www/.ssh && sudo chown www-data:www-data /var/www/.ssh && sudo chsh -s /bin/bash www-data
+
+myecho
