@@ -1,4 +1,4 @@
-[EasyEngine] (https://github.com/rtCamp/easyengine)-[Vagrant](https://vagrantup.com/)
+[EasyEngine](https://github.com/rtCamp/easyengine) - [Vagrant](https://vagrantup.com/)
 ==================
 
 This is a simple Vagrant file to test  EasyEngine on your any system using Vagrant.
@@ -18,18 +18,19 @@ Note: If you are using other that Ubuntu/Debian system, then installation steps 
   ```bash
    sudo dpkg -i vagrant_*.deb
   ```
-2.  You will also need to install [vagrant-hostsupdater](https://vagrantup.com/) plugin for Vagrant
+2.  You will also need to install [vagrant-hostsupdater](https://vagrantup.com/) and [vagrant-disksize](https://github.com/sprotheroe/vagrant-disksize) plugins for Vagrant
 
   ```bash
     sudo vagrant plugin install vagrant-hostsupdater
+    sudo vagrant plugin install vagrant-disksize
   ```
 
 ## Let's setup Vagrant
 1. You can use any distribution from [VagrantCloud](http://vagrantcloud.com/) that supports EasyEngine. By default EasyEngine-Vagrant uses ubuntu/precise. 
-  To change the distribution open the Vagrantfile and replace ubutnu/precise with box name
+  To change the distribution open the Vagrantfile and replace ubuntu/xenial64 with box name
 
   ```bash
-  git clone git@github.com:gau1991/easyengine-vagrant.git
+  git clone git@github.com:DimaMinka/easyengine-vagrant.git
 
   cd easyengine-vagrant
  ```
@@ -39,7 +40,7 @@ Note: If you are using other that Ubuntu/Debian system, then installation steps 
   ```bash
   vagrant up
   ```
-3. It will setup EasyEngine on Vagrant Box. To test, point your system browser to http://easyengine.com
+3. It will setup EasyEngine on Vagrant Box. To test, point your system browser to http://a.dev - html project
 
 4. To check installation log, open another terminal and use
 
