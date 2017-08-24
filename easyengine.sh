@@ -25,3 +25,7 @@ myecho
 sudo mkdir /var/www/.ssh && sudo chown www-data:www-data /var/www/.ssh && sudo chsh -s /bin/bash www-data
 
 myecho
+
+sudo export LC_ALL="en_US.UTF-8"
+
+myecho
