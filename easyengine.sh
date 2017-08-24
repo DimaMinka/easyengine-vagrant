@@ -6,6 +6,8 @@ function myecho()
 	echo =========================================================	
 }
 
+sudo echo -e "[user]\n\tname = vagrant-ee\n\temail = ee@vagrant.dev" > ~/.gitconfig
+
 myecho
 
 wget -qO ee rt.cx/ee && sudo bash ee || exit 1
