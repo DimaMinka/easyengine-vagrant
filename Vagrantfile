@@ -1,6 +1,8 @@
 Vagrant.configure("2") do |config|
 
   config.vm.box = "ubuntu/xenial64"
+  
+  config.disksize.size = "20GB"
 
   config.hostmanager.enabled = true
   config.hostmanager.manage_host = true
@@ -22,6 +24,17 @@ Vagrant.configure("2") do |config|
 
   # Project
   # config.vm.synced_folder '/Users/user', '/var/www', owner: "www-data", group: "www-data"
+  
+  config.vm.provider "virtualbox" do |v|
+    # Name our Box
+    v.name = "vagrant-ee"
+
+    # Changes these values depending on your host system specs
+    v.customize ["modifyvm", :id, "--memory", 1024]
+    v.customize ["modifyvm", :id, "--cpus", 2]
+    v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+  end
 
   config.vm.synced_folder "logs/", "/var/log/easyengine", owner: "root", group: "root"
   
