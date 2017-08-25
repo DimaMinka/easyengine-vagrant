@@ -20,13 +20,17 @@ myecho
 
 sudo ee site create a.dev --html || exit 1
 
-myechomyecho
-
-export LC_ALL="en_US.UTF-8"
-
 myecho
 
-sudo ee site create a.dev --html || exit 1
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+sudo touch /var/lib/cloud/instance/locale-check.skip
+
+sudo touch ~/.profile
+sudo echo "export LC_ALL=en_US.UTF-8" > ~/.profile
+sudo echo "export LANG=en_US.UTF-8" >> ~/.profile
+sudo mv ~/.profile /var/www
+sudo chown www-data:www-data /var/www/.profile
 
 myecho
 
