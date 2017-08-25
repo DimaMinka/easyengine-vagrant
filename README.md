@@ -1,13 +1,14 @@
 [EasyEngine](https://github.com/rtCamp/easyengine) - [Vagrant](https://vagrantup.com/)
 ==================
 
-This is a simple Vagrant file to test  EasyEngine on your any system using Vagrant.
+This is a simple Vagrant file to work with EasyEngine on your any system using Vagrant.
+The box include [Wordmove](https://github.com/welaika/wordmove) for easy deployment and small fixes for easy working by ssh. (wordmove, wp-cli, composer, git)
 
 Note: If you are using other that Ubuntu/Debian system, then installation steps will differ, but setup steps are same.
 
 
 ## Installation
-1. First we will install Virtual Box and Vagrant on our system.
+1. First we will install Virtual Box and Vagrant on our system - [VirtualBox](https://www.virtualbox.org) or
 
   ```bash
   sudo apt-get install virtualbox
