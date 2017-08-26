@@ -40,3 +40,9 @@ sudo chown www-data:www-data /var/www/.ssh/* && sudo chmod 600 /var/www/.ssh/*
 sudo chsh -s /bin/bash www-data
 
 myecho
+
+sudo apt install composer
+sudo mkdir var/www/.cache && sudo chown www-data:www-data /var/www/.cache
+
+myecho
+
