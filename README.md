@@ -13,16 +13,16 @@ Note: If you are using other that Ubuntu/Debian system, then installation steps 
   ```bash
   sudo apt-get install virtualbox
   ```
-1.  After that download the latest version of Vagrant from http://www.vagrantup.com/downloads
+1.  After that download the latest version of Vagrant from the [Website](https://www.vagrantup.com/downloads.html)
 2.  Install vagrant
 
   ```bash
    sudo dpkg -i vagrant_*.deb
   ```
-2.  You will also need to install [vagrant-hostsupdater](https://vagrantup.com/) and [vagrant-disksize](https://github.com/sprotheroe/vagrant-disksize) plugins for Vagrant
+2.  You will also need to install [vagrant-hostmanager](https://github.com/devopsgroup-io/vagrant-hostmanager) and [vagrant-disksize](https://github.com/sprotheroe/vagrant-disksize) plugins for Vagrant
 
   ```bash
-    sudo vagrant plugin install vagrant-hostsupdater
+    sudo vagrant plugin install vagrant-hostmanager
     sudo vagrant plugin install vagrant-disksize
   ```
 
