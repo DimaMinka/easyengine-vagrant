@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "private_network", ip: "192.168.33.10"
 
   config.hostmanager.aliases = %w(
-    a.dev
+    a.test
   )
 
   config.vm.synced_folder '.', '/vagrant', disabled: true
@@ -38,7 +38,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.synced_folder "logs/", "/var/log/easyengine", owner: "root", group: "root"
 
-  config.vm.provision "shell", inline: "apt-get update && apt-get install -y curl"
+  config.vm.provision "shell", inline: "sudo apt-get update && sudo apt-get install -y curl"
   
   config.vm.provision "shell", path: "easyengine.sh"
 
