@@ -2,7 +2,7 @@
 ==================
 
 This is a simple Vagrant file to work with EasyEngine on your any system using Vagrant.
-The box include [Wordmove](https://github.com/welaika/wordmove) for easy deployment and small fixes for easy working by ssh. (wordmove, wp-cli, composer, git)
+The box include [Wordmove](https://github.com/welaika/wordmove) for easy deployment and small fixes for easy working by ssh. (wordmove, wp-cli, composer, git, gtop)
 
 Note: If you are using other that Ubuntu/Debian system, then installation steps will differ, but setup steps are same.
 
@@ -41,7 +41,7 @@ Note: If you are using other that Ubuntu/Debian system, then installation steps 
   ```bash
   vagrant up
   ```
-3. It will setup EasyEngine on Vagrant Box. To test, point your system browser to http://a.dev - html project
+3. It will setup EasyEngine on Vagrant Box. To test, point your system browser to http://a.test - html project
 
 4. To check installation log, open another terminal and use
 
