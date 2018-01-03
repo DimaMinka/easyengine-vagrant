@@ -6,7 +6,7 @@ function myecho()
 	echo =========================================================	
 }
 
-sudo echo -e "[user]\n\tname = vagrant-ee\n\temail = ee@vagrant.dev" > ~/.gitconfig
+sudo echo -e "[user]\n\tname = vagrant-ee\n\temail = ee@vagrant.test" > ~/.gitconfig
 
 myecho
 
@@ -18,7 +18,7 @@ sudo ee stack install || exit 1
 
 myecho
 
-sudo ee site create a.dev --html || exit 1
+sudo ee site create a.test --html || exit 1
 
 myecho
 
@@ -41,8 +41,24 @@ sudo chsh -s /bin/bash www-data
 
 myecho
 
-sudo apt install composer
+sudo curl -sS https://getcomposer.org/installer | php -- --filename=composer --install-dir=/usr/local/bin || exit 1
 sudo mkdir var/www/.cache && sudo chown www-data:www-data /var/www/.cache
 
 myecho
+
+sudo curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar || exit 1
+sudo chmod +x wp-cli.phar
+sudo mv wp-cli.phar /usr/local/bin/wp
+wp --info
+
+myecho
+
+sudo apt-get install nodejs || exit 1
+sudo apt-get install npm || exit 1
+npm -v
+npm install gtop -g || exit 1
+
+myecho
+
+
 
