@@ -53,10 +53,9 @@ wp --info
 
 myecho
 
-sudo apt-get -y install nodejs-legacy || exit 1
-sudo apt-get -y install npm || exit 1
-npm -v
-npm install gtop -g || exit 1
+sudo apt-get -y install nodejs-legacy
+sudo apt-get -y install npm
+sudo npm install gtop -g
 
 myecho
 
