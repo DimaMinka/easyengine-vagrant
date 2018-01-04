@@ -53,7 +53,7 @@ wp --info
 
 myecho
 
-sudo apt-get install nodejs || exit 1
+sudo apt install nodejs-legacy || exit 1
 sudo apt-get install npm || exit 1
 npm -v
 npm install gtop -g || exit 1
