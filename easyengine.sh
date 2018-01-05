@@ -42,7 +42,7 @@ sudo chsh -s /bin/bash www-data
 myecho
 
 sudo curl -sS https://getcomposer.org/installer | php -- --filename=composer --install-dir=/usr/local/bin || exit 1
-sudo mkdir var/www/.cache && sudo chown www-data:www-data /var/www/.cache
+sudo mkdir /var/www/.cache && sudo chown www-data:www-data /var/www/.cache
 
 myecho
 
