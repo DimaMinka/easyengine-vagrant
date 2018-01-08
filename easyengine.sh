@@ -53,8 +53,8 @@ wp --info
 
 myecho
 
-sudo apt-get -y install nodejs-legacy
-sudo apt-get -y install npm
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
 sudo npm install gtop -g
 
 myecho
