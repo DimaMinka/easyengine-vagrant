@@ -56,7 +56,12 @@ myecho
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 sudo npm install gtop -g
+
 sudo npm i yarn -g
+sudo touch /var/www/.yarnrc && sudo chown www-data:www-data /var/www/.yarnrc
+sudo touch /var/www/.yarn && sudo chown www-data:www-data /var/www/.yarn
+
+sudo npm i gulp -g
 
 myecho
 
